@@ -22,8 +22,7 @@ public class GameService {
     }
     @Transactional(readOnly = true)
     public GameDTO findById(Long id){
-        Game result = gameRepository.findById(id).get();
-        return new GameDTO(result);
+        return new GameDTO(gameRepository.findById(id).get());
     }
 
 }
