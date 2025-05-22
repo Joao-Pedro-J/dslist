@@ -21,9 +21,4 @@ public class GameListService {
         return result.stream().map(x -> new GameListDTO(x)).toList();
     }
 
-    @Transactional(readOnly = true)
-    public GameListDTO findById(Long id){
-        return new GameListDTO(gameLIstRepository.findById(id).get());
-    }
-
 }

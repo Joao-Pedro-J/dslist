@@ -26,4 +26,5 @@ public class GameController {
     public GameDTO findById(@PathVariable Long id){
         return gameService.findById(id);
     }
+
 }
